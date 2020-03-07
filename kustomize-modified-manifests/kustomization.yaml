@@ -1,0 +1,7 @@
+# bases는 deprecated 되었지만 kubectl 에 포함된 kustomize의 버전이 현재도 v2.0.3임
+# https://github.com/kubernetes-sigs/kustomize#kubectl-integration
+bases:
+- 'github.com/leoh0/kustomize-example.git/kustomize-manifests/?ref=master'
+
+patchesStrategicMerge:
+- overlay/configMap.yaml
